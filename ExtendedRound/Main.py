@@ -66,7 +66,7 @@ def main():
 	intersections, schedule = {}, {}
 
 	# Calculate passing and waiting cars on each street (ignoring the last street in car's path)
-	for car, values in cars.items():
+	for values in cars.values():
 		for i, street in enumerate(values.path):
 			if i == 0:
 				streets.get(street).waitingCars += 1
@@ -93,8 +93,7 @@ def main():
 		# Calculate best duration for each traffic light on the intersection
 		for street in values.incomingStreets:
 			factor = 1 # 1-20
-			time = round(streets.get(street).passingCars / totalPassingCars * factor)
-			time = max(1, time)
+			time = max(1, round(streets.get(street).passingCars / totalPassingCars * factor))
 
 			if intersection in schedule:
 				schedule.get(intersection).update({street: [time, streets.get(street).waitingCars]})
