@@ -1,6 +1,6 @@
 # Google Hash Code 2021
 
-[Google Hash Code 2021](https://codingcompetitions.withgoogle.com/hashcode) - Traffic Signaling - Extended Round (167th)
+[Google Hash Code 2021](https://codingcompetitions.withgoogle.com/hashcode) - Traffic Signaling - Extended Round (197th)
 
 ## Problem Description
 
